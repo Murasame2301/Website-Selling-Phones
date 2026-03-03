@@ -483,8 +483,13 @@ footer > .container {
     color: #fff !important;
 }
 
+/* class to add with js */
 
+.display-none {
+    display: none;
+}
 
-
-
-
+.popover{
+    visibility: visible;
+    transform: translateX(0%);
+}
