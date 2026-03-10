@@ -13,26 +13,85 @@ cartList.push(
     {
         "id": 0,
         "quantity": 5,
-        "variant": 2 
+        "variant": 2,
+        "model": null
     },
     {
         "id": 2,
         "quantity": 1,
-        "variant": 1 
+        "variant": 1, 
+        "model": null 
     },
     {
         "id": 1,
         "quantity": 2,
-        "variant": 1 
+        "variant": 1, 
+        "model": null
     },
     {
         "id": 3,
         "quantity": 4,
-        "variant": 1 
+        "variant": 1, 
+        "model": null 
+    },
+    {
+        "id": 28,
+        "quantity": 1,
+        "variant": null,
+        "model": 0
+    },
+    {
+        "id": 25, 
+        "quantity": 13,
+        "variant": 3, 
+        "model": 0 
+    },
+    {
+        "id": 26,
+        "quantity": 1,
+        "variant": null, 
+        "model": 1 
+    },
+    {
+        "id": 27,
+        "quantity": 7,
+        "variant": null, 
+        "model": 1 
     }
 );
 console.log(cartList);
 
+// check if cart is empty
+
+async function emptyCart() {
+    const cart__content= document.querySelector(".cart__content");
+    const cart_empty = document.querySelector(".cart-empty");
+    if (cartList.length == 0) {
+        cart_empty.classList.remove("display-none");
+        cart__content.classList.add("display-none");
+    }
+    else {
+        cart__content.classList.remove("display-none");
+        cart_empty.classList.add("display-none");
+    }
+    return new Promise ((resolve) => {
+        resolve();
+    })
+}
+
+/* populate and add function to item */
+
+async function populate(){
+    const sanpham = await getData();
+    for (let i = 0;i < cartList.length; i++) {
+        // addItem(i);
+        addItem(cartList[i],i,sanpham);
+    }
+
+    return new Promise((resolve) => {
+        resolve();
+    })
+}
 
 function addItem(cartItem,cartIndex,sanpham) {
     const cart__item_box = document.querySelector(".cart__item-box");
@@ -96,11 +155,19 @@ function addItem(cartItem,cartIndex,sanpham) {
     item_name.innerHTML = sanpham[cartItem.id].name;
     
     item_variant.classList.add("item-variant");
-    if (sanpham[cartItem.id].variant != null)
+    if (cartItem.variant != null && cartItem.model != null)
+        item_variant.innerHTML = sanpham[cartItem.id].variant[cartItem.variant]
+                                    + " / " + sanpham[cartItem.id].model[cartItem.model].modelName;
+    else if (cartItem.model == null)
         item_variant.innerHTML = sanpham[cartItem.id].variant[cartItem.variant];
+    else if (cartItem.model != null)
+        item_variant.innerHTML =  sanpham[cartItem.id].model[cartItem.model].modelName;
 
     item_price.classList.add("item-price");
-    item_price.innerHTML = sanpham[cartItem.id].price;
+    if (cartItem.model == null)
+        item_price.innerHTML = sanpham[cartItem.id].price;
+    else
+        item_price.innerHTML = sanpham[cartItem.id].model[cartItem.model].modelPrice;
 
     cart_item__info.appendChild(item_name);
     cart_item__info.appendChild(item_variant);
@@ -138,26 +205,6 @@ function addItem(cartItem,cartIndex,sanpham) {
     cart_item__remove_popover.appendChild(row);
 }
 
-function updateCartIndex() {
-    let cart__item; 
-    for (let i = 0; i < document.getElementsByClassName("cart__item").length;i++) {
-        cart__item= document.getElementsByClassName("cart__item")[i];
-        cart__item.setAttribute("data-index",i);
-    }
-}
-
-async function populate(){
-    const sanpham = await getData();
-    for (let i = 0;i < cartList.length; i++) {
-        // addItem(i);
-        addItem(cartList[i],i,sanpham);
-    }
-
-    return new Promise((resolve) => {
-        resolve();
-    })
-}
-
 async function changeItemQuantity() {
     const cart_item__quantity = document.getElementsByClassName("cart_item__quantity");
 
@@ -182,6 +229,14 @@ async function changeItemQuantity() {
                 updateTotalCost();
             }
         })
+    }
+}
+
+function updateCartIndex() {
+    let cart__item; 
+    for (let i = 0; i < document.getElementsByClassName("cart__item").length;i++) {
+        cart__item= document.getElementsByClassName("cart__item")[i];
+        cart__item.setAttribute("data-index",i);
     }
 }
 
@@ -211,6 +266,8 @@ function addRemoveFunct() {
     };
 }
 
+// total cost
+
 async function updateTotalCost() {
     const sanpham = await getData();
 
@@ -237,8 +294,13 @@ async function updateTotalCost() {
     intToPrice += totalCost_string.slice(totalCost_string.length - 3,totalCost_string.length);
     
     //update html
-    const item_quantity = document.querySelector(".cart_cost__amount");
-    item_quantity.innerHTML = intToPrice + "đ";
+    const cost_amount= document.querySelector(".cart_cost__amount");
+    cost_amount.innerHTML = intToPrice + "đ";
+    cost_amount.setAttribute("data-total-cost",totalCost);
+
+    return new Promise((resolve) => {
+        resolve();
+    })
 }
 
 function priceToInt(price) { //remove thousands separator
@@ -251,28 +313,22 @@ function priceToInt(price) { //remove thousands separator
     return fullPrice;
 }
 
-async function emptyCart() {
-    const cart__content= document.querySelector(".cart__content");
-    const cart_empty = document.querySelector(".cart-empty");
-    if (cartList.length == 0) {
-        cart_empty.classList.remove("display-none");
-        cart__content.classList.add("display-none");
-    }
-    else {
-        cart__content.classList.remove("display-none");
-        cart_empty.classList.add("display-none");
-    }
-    return new Promise ((resolve) => {
-        resolve();
-    })
+function thanhToan() {
+    const thanhToan = document.querySelector(".buy  .btn-red");
+    const totalCost = document.querySelector(".cart_cost__amount");
+    console.log(totalCost.dataset.totalCost);
+    thanhToan.addEventListener("click", function() {
+        sessionStorage.setItem("totalCost", totalCost.dataset.totalCost);  
+    });
 }
 
 async function main() {
     await emptyCart();
     await populate();
-    updateTotalCost();
+    await updateTotalCost();
     addRemoveFunct();
     changeItemQuantity(); 
+    thanhToan();
 }
 
 main();
