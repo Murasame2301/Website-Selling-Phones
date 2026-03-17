@@ -1,8 +1,11 @@
+.wrapper {
+    background-color: #F0F2F5 !important;
+}
+
 /* footer */
 footer > .container {
     display: none;
 }
-
 
 /* container */
 
@@ -413,7 +416,8 @@ footer > .container {
 }
 
 .cart_cost__amount {
-    padding: 20px 80px 20px 20px;
+    padding: 20px 40px 20px 40px;
+    text-align: center;
 }
 
  /* buy button */
@@ -451,6 +455,10 @@ footer > .container {
 .btn-red {
     background-color: #f33;
     color: #fff !important;
+}
+
+.btn_default {
+    background-color: #fff;
 }
 
 /* class to add with js */

@@ -314,13 +314,14 @@ function thanhToan() {
     console.log(totalCost.dataset.totalCost);
     thanhToan.addEventListener("click", function() {
         sessionStorage.setItem("totalCost", totalCost.dataset.totalCost);  
+        sessionStorage.setItem("totalCostVND", totalCost.innerHTML);
     });
 }
 
 async function main() {
     await emptyCart();
     await populate();
-    await updateTotalCost();
+    updateTotalCost();
     addRemoveFunct();
     changeItemQuantity(); 
     thanhToan();

@@ -111,7 +111,98 @@
 
             <div class="page_content">
                 <div class="container">
-                    <div 
+                    <div class="cart__checkout">
+                        <div class="cart_checkout_left">
+                            <div class="cart_checkout_info customer">
+                                <h2>Thông tin thanh toán</h2>
+
+                                <div class="checkout_input full_name">
+                                    <label for="billing_fullName">Họ và tên</label>
+                                    <input id="billing_fullName" name="billing_fullName" value="" placeholder="Điền họ tên của bạn.">
+                                </div>
+                                <div class="checkout_input billing_email">
+                                    <label for="billing_email">Email</label>
+                                    <input id="billing_email" name="billing_email" value="" placeholder="Địa chỉ email của bạn.">
+                                </div>
+                                <div class="checkout_input phone_number">
+                                    <label for="billing_phoneNumber">Số điện thoại</label>
+                                    <input id="billing_phoneNumber" name="billing_phoneNumber" value="" placeholder="Điện thoại liên lạc với bạn.">
+                                </div>
+                                <div class="checkout_input billing_address">
+                                    <label for="billing_address">Địa chỉ</label>
+                                    <input id="billing_address" name="billing_address" value="" placeholder="Địa chỉ của bạn.">
+                                </div>
+                                <div class="checkout_input billing_city">
+                                    <label for="billing_city">Tỉnh / Thành Phố</label>
+                                    <select id="billing_city" name="billing_city" value="" placeholder="Chọn tỉnh thành"></select>
+                                </div>
+                                <div class="checkout_input billing_ward">
+                                    <label for="billing_ward">Phường Xã</label>
+                                    <select id="billing_ward" name="shipping_ward" value="" placeholder="Chọn phường xã"></select>
+                                </div>
+
+                                <div class="checkout_checkbox">
+                                    <input type="checkbox" id="shipping" name="shipping" class="test">
+                                    <label for="shipping">Giao hàng tới địa chỉ khác?</label>
+                                </div>
+                            </div>
+
+                            <div class="cart_checkout_info shipping display_none">
+                                <h2>Thông tin giao hàng</h2>
+
+                                <div class="checkout_input full_name">
+                                    <label for="shipping_fullName">Họ và tên</label>
+                                    <input id="shipping_fullName" name="shipping_fullName" value="" placeholder="Điền họ tên của bạn.">
+                                </div>
+                                <div class="checkout_input shipping_email">
+                                    <label for="shipping_email">Email</label>
+                                    <input id="shipping_email" name="shipping_email" value="" placeholder="Địa chỉ email của bạn.">
+                                </div>
+                                <div class="checkout_input phone_number">
+                                    <label for="shipping_phoneNumber">Số điện thoại</label>
+                                    <input id="shipping_phoneNumber" name="shipping_phoneNumber" value="" placeholder="Điện thoại liên lạc với bạn.">
+                                </div>
+                                <div class="checkout_input shipping_address">
+                                    <label for="shipping_address">Địa chỉ</label>
+                                    <input id="shipping_address" name="shipping_address" value="" placeholder="Địa chỉ của bạn.">
+                                </div>
+                                <div class="checkout_input shipping_city">
+                                    <label for="shipping_city">Tỉnh / Thành Phố</label>
+                                    <select id="shipping_city" name="shipping_city" value="" placeholder="Chọn tỉnh thành"></select>
+                                </div>
+                                <div class="checkout_input shipping_ward">
+                                    <label for="shipping_ward">Phường Xã</label>
+                                    <select id="shipping_ward" name="shipping_ward" value="" placeholder="Chọn phường xã"></select>
+                                </div>
+                            </div>
+
+                            <div class="cart_checkout_payment_option">
+                                <h2>Hình thức thanh toán</h2>
+                                <div class="payment">
+                                    <div class="">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div clas="cart_checkout_comment">
+
+                            </div> 
+                        </div> 
+
+                        <div class="cart_checkout_right">
+                            <div> 
+                                <div class="row buy">
+                                    <a class="btn btn_default" href="./gio-hang.html">Quay lại</a>
+                                    <a class="btn btn-red" href="#">Đặt hàng</a>
+                                </div>
+                                <div class="cart__cost">
+                                    <div class="cart_cost__title">Tổng Tiền</div>
+                                    <div class="cart_cost__amount"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
