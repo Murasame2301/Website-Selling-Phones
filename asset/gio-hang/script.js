@@ -292,7 +292,7 @@ async function updateTotalCost() {
     
     //update html
     const cost_amount= document.querySelector(".cart_cost__amount");
-    cost_amount.innerHTML = intToPrice + "đ";
+    cost_amount.innerHTML = intToPrice + " đ";
     cost_amount.setAttribute("data-total-cost",totalCost);
 
     return Promise.resolve();
