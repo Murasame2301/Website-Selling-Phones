@@ -12,7 +12,10 @@
         "price": "34,990,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/samsung1.png"
+            "./asset/san-pham/images/samsung1/den.png",
+            "./asset/san-pham/images/samsung1/xanh-mint.png",
+            "./asset/san-pham/images/samsung1/xam.png",
+            "./asset/san-pham/images/samsung1/xanh-navy.png"
         ]
     },
     {
@@ -28,8 +31,10 @@
         "price": "32,490,000đ",
         "info": "",
         "images": [
-            "./san-pham/images/samsung2.png",
-            ""
+            "./san-pham/images/samsung2/den.png",
+            "./san-pham/images/samsung2/trang.png",
+            "./san-pham/images/samsung2/tim.png",
+            "./san-pham/images/samsung2/vang-hong.png"
         ]
     },
     {
@@ -45,8 +50,10 @@
         "price": "27,190,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/samsung3.png",
-            ""
+            "./asset/san-pham/images/samsung3/trang.jpg",
+            "./asset/san-pham/images/samsung3/den.png",
+            "./asset/san-pham/images/samsung3/hong.webp",
+            "./asset/san-pham/images/samsung3/xam.png"
         ]
     },
     {
@@ -62,8 +69,10 @@
         "price": "14,990,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/samsung4.png",
-            ""
+            "./asset/san-pham/images/samsung4/trang.png",
+            "./asset/san-pham/images/samsung4/den.png",
+            "./asset/san-pham/images/samsung4/xanh-navy.png",
+            "./asset/san-pham/images/samsung4/xanh-icy.png"
         ]
     },
     {
@@ -79,8 +88,10 @@
         "price": "11,290,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/samsung5.png",
-            ""
+            "./asset/san-pham/images/samsung5/den.png",
+            "./asset/san-pham/images/samsung5/xanh-da-troi.png",
+            "./asset/san-pham/images/samsung5/xanh-mint.png",
+            "./asset/san-pham/images/samsung5/xam.png"
         ]
     },
     {
@@ -95,8 +106,9 @@
         "price": "40,990,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/apple1.png",
-            ""
+            "./asset/san-pham/images/apple1/trang.png",
+            "./asset/san-pham/images/apple1/cam-vu-tru.png",
+            "./asset/san-pham/images/apple1/xanh-duong-dam.png"
         ]
     },
     {
@@ -111,8 +123,9 @@
         "price": "41,290,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/apple2.png",
-            ""
+            "./asset/san-pham/images/apple2/trang.png",
+            "./asset/san-pham/images/apple2/cam-vu-tru.png",
+            "./asset/san-pham/images/apple2/xanh-duong-dam.png"
         ]
     },
     {
@@ -128,8 +141,10 @@
         "price": "25,190,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/apple3.jpg",
-            ""
+            "./asset/san-pham/images/apple3/trang.jpg",
+            "./asset/san-pham/images/apple3/den.jpg",
+            "./asset/san-pham/images/apple3/tu-nhien.jpg",
+            "./asset/san-pham/images/apple3/sa-mac.jpg"
         ]
     },
     {
@@ -143,8 +158,8 @@
         "price": "16,790,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/apple4.jpg",
-            ""
+            "./asset/san-pham/images/apple4/trang.webp",
+            "./asset/san-pham/images/apple4/den.webp"
         ]
     },
     {
@@ -160,8 +175,10 @@
         "price": "18,990,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/apple5.png",
-            ""
+            "./asset/san-pham/images/apple5/xanh-duong.png",
+            "./asset/san-pham/images/apple5/den.png",
+            "./asset/san-pham/images/apple5/hong.png",
+            "./asset/san-pham/images/apple5/vang.png"
         ]
     },
     {
@@ -177,8 +194,10 @@
         "price": "29,190,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/apple6.jpg",
-            ""
+            "./asset/san-pham/images/apple6/den.jpg",
+            "./asset/san-pham/images/apple6/tu-nhien.jpg",
+            "./asset/san-pham/images/apple6/xanh.jpg",
+            "./asset/san-pham/images/apple6/trang.jpg"
         ]
     },
     {
@@ -192,8 +211,8 @@
         "price": "31,190,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/apple7.jpg",
-            ""
+            "./asset/san-pham/images/apple7/trang.jpg",
+            "./asset/san-pham/images/apple7/den.jpg"
         ]
     },
     {
@@ -207,8 +226,8 @@
         "price": "36,890,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/apple8.jpg",
-            ""
+            "./asset/san-pham/images/apple8/den.jpg",
+            "./asset/san-pham/images/apple8/bac.jpg"
         ]
     },
     {
@@ -224,8 +243,10 @@
         "price": "21,990,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/apple9.jpg",
-            ""
+            "./asset/san-pham/images/apple9/xam.jpg",
+            "./asset/san-pham/images/apple9/tim.jpg",
+            "./asset/san-pham/images/apple9/starlight.jpg",
+            "./asset/san-pham/images/apple9/xanh-duong.jpg"
         ]
     },
     {
@@ -240,8 +261,9 @@
         "price": "26,590,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/oppo1.png",
-            ""
+            "./asset/san-pham/images/oppo1/do.jpg",
+            "./asset/san-pham/images/oppo1/trang.png",
+            "./asset/san-pham/images/oppo1/xam.png"
         ]
     },
     {
@@ -255,8 +277,8 @@
         "price": "16,890,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/oppo2.png",
-            ""
+            "./asset/san-pham/images/oppo2/den.png",
+            "./asset/san-pham/images/oppo2/xam.png"
         ]
     },
     {
@@ -270,8 +292,8 @@
         "price": "15,590,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/oppo3.png",
-            ""
+            "./asset/san-pham/images/oppo3/xanh-duong.jpg",
+            "./asset/san-pham/images/oppo3/nau.jpg"
         ]
     },
     {
@@ -285,8 +307,8 @@
         "price": "15,190,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/oppo4.png",
-            ""
+            "./asset/san-pham/images/oppo4/trang.jpg",
+            "./asset/san-pham/images/oppo4/den.png"
         ]
     },
     {
@@ -300,8 +322,8 @@
         "price": "11,890,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/oppo5.jpg",
-            ""
+            "./asset/san-pham/images/oppo5/xanh-duong.png",
+            "./asset/san-pham/images/oppo5/trang.png"
         ]
     },
     {
@@ -316,8 +338,9 @@
         "price": "16,190,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/xiomi1.jpg",
-            ""
+            "./asset/san-pham/images/xiomi1/trang.jpg",
+            "./asset/san-pham/images/xiomi1/den.jpg",
+            "./asset/san-pham/images/xiomi1/xanh-la.jpg"
         ]
     },
     {
@@ -332,8 +355,9 @@
         "price": "15,190,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/xiomi2.jpg",
-            ""
+            "./asset/san-pham/images/xiomi2/trang.jpg",
+            "./asset/san-pham/images/xiomi2/den.jpg",
+            "./asset/san-pham/images/xiomi2/xanh-la.jpg"
         ]
     },
     {
@@ -348,8 +372,9 @@
         "price": "13,990,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/xiomi3.jpg",
-            ""
+            "./asset/san-pham/images/xiomi3/den.jpg",
+            "./asset/san-pham/images/xiomi3/vang.jpg",
+            "./asset/san-pham/images/xiomi3/xam.jpg"
         ]
     },
     {
@@ -364,8 +389,9 @@
         "price": "9,290,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/xiomi4.jpg",
-            ""
+            "./asset/san-pham/images/xiomi3/den.jpg",
+            "./asset/san-pham/images/xiomi3/vang.jpg",
+            "./asset/san-pham/images/xiomi3/xam.jpg"
         ]
     },
     {
@@ -379,8 +405,8 @@
         "price": "11,390,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/vivo1.jpg",
-            ""
+            "./asset/san-pham/images/vivo1/tim.jpg",
+            "./asset/san-pham/images/vivo1/xam.jpg"
         ]
     },
     {
@@ -395,8 +421,9 @@
         "price": "7,190,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/vivo2.jpg",
-            ""
+            "./asset/san-pham/images/vivo2/xanh-duong.jpg",
+            "./asset/san-pham/images/vivo2/den.jpg",
+            "./asset/san-pham/images/vivo2/hong.jpg"
         ]
     },
     {
@@ -421,7 +448,10 @@
         "price": "10,290,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/pk1.webp"
+            "./asset/san-pham/images/pk1/xanh-duong.webp",
+            "./asset/san-pham/images/pk1/trang.webp",
+            "./asset/san-pham/images/pk1/den.webp",
+            "./asset/san-pham/images/pk1/tim.webp"
         ]
     },
     {
