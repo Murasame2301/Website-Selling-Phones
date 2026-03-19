@@ -118,7 +118,12 @@ function addItem(cartItem,cartIndex,sanpham) {
     // item img
     const item_img = document.createElement("img");
     item_img.classList.add("item__img");
-    item_img.setAttribute("src","./asset/gio-hang/images/iphone-17-pro-max-blue.png")
+    if (cartItem.variant == null) {
+        item_img.setAttribute("src", sanpham[cartItem.id].images[0]);
+    }
+    else {
+        item_img.setAttribute("src", sanpham[cartItem.id].images[cartItem.variant]);
+    }
     cart_item__img.appendChild(item_img);
 
     //item quantity

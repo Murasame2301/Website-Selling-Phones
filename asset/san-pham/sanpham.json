@@ -31,10 +31,10 @@
         "price": "32,490,000đ",
         "info": "",
         "images": [
-            "./san-pham/images/samsung2/den.png",
-            "./san-pham/images/samsung2/trang.png",
-            "./san-pham/images/samsung2/tim.png",
-            "./san-pham/images/samsung2/vang-hong.png"
+            "./asset/san-pham/images/samsung2/den.png",
+            "./asset/san-pham/images/samsung2/trang.png",
+            "./asset/san-pham/images/samsung2/tim.png",
+            "./asset/san-pham/images/samsung2/vang-hong.png"
         ]
     },
     {
@@ -471,7 +471,7 @@
         "price": "5,290,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/pk2.jpg"
+            "./asset/san-pham/images/pk2/pk2.jpg"
         ]
     },
     {
@@ -491,7 +491,7 @@
         "price": "2,690,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/pk3.png"
+            "./asset/san-pham/images/pk3/pk3.png"
         ]
     },
     {
@@ -511,7 +511,7 @@
         "price": "1,790,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/pk4.jpg"
+            "./asset/san-pham/images/pk4/pk4.jpg"
         ]
     },
     {
@@ -522,7 +522,7 @@
         "price": "950,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/pk5.jpg"
+            "./asset/san-pham/images/pk5/pk5.jpg"
         ]
     },
     {
@@ -533,7 +533,7 @@
         "price": "900,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/pk6.jpg"
+            "./asset/san-pham/images/pk6/pk6.jpg"
         ]
     },
     {
@@ -544,7 +544,7 @@
         "price": "280,000đ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/pk7.jpg"
+            "./asset/san-pham/images/pk7/pk7.jpg"
         ]
     },
     {
@@ -555,7 +555,7 @@
         "price": "590,000đ ",
         "info": "",
         "images": [
-            "./asset/san-pham/images/pk8.jpg"
+            "./asset/san-pham/images/pk8/pk8.jpg"
         ]
     }
 ]
