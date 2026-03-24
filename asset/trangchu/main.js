@@ -33,4 +33,35 @@ function main(){
     open('.question-item__tittle');
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    const authSection = document.getElementById("auth-section");
+    const currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
+
+    if (currentUser) {
+        authSection.innerHTML = `
+            <div class="user-menu">
+                <img src="./asset/trangchu/images/default-avatar.jpg" 
+                    alt="avatar" 
+                    class="avatar" 
+                    onclick="toggleMenu()" />
+                <p class="username">${currentUser.userName}</p>
+                <div id="menu" class="dropdown hidden">
+                    <a href="./gio-hang.html">Giỏ hàng của bạn</a>
+                    <a href="./dang-nhap.html" onclick="logout()">Đăng xuất</a>
+                </div>
+            </div>
+        `;
+    }
+});
+
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("hidden");
+}
+
+function logout() {
+    sessionStorage.removeItem("currentUser");
+    window.location.href = "./index.html"; // quay lại trang chủ
+}
+
+
 main();
