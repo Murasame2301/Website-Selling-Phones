@@ -7,28 +7,6 @@ async function getData() {
 
 //fetch cartList
 const cartList = JSON.parse(sessionStorage.getItem("cartList"));
-// cartList.push(
-//     {
-//         "id": 0,
-//         "quantity": 5,
-//         "colors": 2
-//     },
-//     {
-//         "id": 2,
-//         "quantity": 1,
-//         "colors": 1
-//     },
-//     {
-//         "id": 1,
-//         "quantity": 2,
-//         "colors": 1
-//     },
-//     {
-//         "id": 23,
-//         "quantity": 4,
-//         "colors": 0
-//     }
-// );
 console.log(cartList);
 
 // check if cart is empty

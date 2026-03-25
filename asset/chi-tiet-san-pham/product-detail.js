@@ -241,6 +241,7 @@ async function initProductDetail() {
 
     // cartItem product id
     cartItem.id = id;
+    cartItem.id--;
 
     let product = null;
 
