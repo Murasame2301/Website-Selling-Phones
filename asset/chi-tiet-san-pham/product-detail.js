@@ -2,23 +2,23 @@
 //const cartList = JSON.parse(sessionStorage.getItem("cartList"))
 if (JSON.parse(sessionStorage.getItem("cartList")) == null) {
   let temp = [];
-  window.sessionStorage.setItem("cartList",JSON.stringify(temp));
-};
+  window.sessionStorage.setItem("cartList", JSON.stringify(temp));
+}
 
 var cartItem = {
-  "id": 0,
-  "quantity": 1,
-  "colors": 0
+  id: 0,
+  quantity: 1,
+  colors: 0,
 };
 
 // kiem tra san pham trung
 function isDuplicate(cart_item) {
   const cartList = JSON.parse(sessionStorage.getItem("cartList"));
   let flag = -1;
-  cartList.forEach((item,index) => {
+  cartList.forEach((item, index) => {
     if (cart_item.id == item.id && cart_item.colors == item.colors)
       flag = index;
-  })
+  });
   return flag;
 }
 
@@ -58,16 +58,17 @@ function renderProduct(product) {
   const productName = document.getElementById("productName");
   const detailTitle = document.getElementById("detailTitle");
 
-
   breadcrumb.children[2].children[0].textContent = product.brand;
-  breadcrumb.children[2].children[0].setAttribute("href", "./" + product.brand.toLowerCase() + ".html");
-
+  breadcrumb.children[2].children[0].setAttribute(
+    "href",
+    "./" + product.brand.toLowerCase() + ".html",
+  );
   const pdCrumb = document.createElement("li");
-  pdCrumb.innerHTML = "<a href=\"#\">" + product.product_name + "</a></li>";
+  pdCrumb.innerHTML = '<a href="#">' + product.short_name + "</a></li>";
   const sep = document.createElement("span");
   sep.textContent = "/";
   breadcrumb.appendChild(sep);
-  breadcrumb.appendChild(pdCrumb); 
+  breadcrumb.appendChild(pdCrumb);
 
   if (productName) {
     productName.textContent = product.full_name || "Sản phẩm";
@@ -167,15 +168,14 @@ function renderProduct(product) {
       if (cart_index == -1) {
         const cartList = JSON.parse(sessionStorage.getItem("cartList"));
         cartList.push(cartItem);
-        window.sessionStorage.setItem("cartList",JSON.stringify(cartList));
-      }
-      else {
+        window.sessionStorage.setItem("cartList", JSON.stringify(cartList));
+      } else {
         const cartList = JSON.parse(sessionStorage.getItem("cartList"));
         cartList[cart_index].quantity++;
-        window.sessionStorage.setItem("cartList",JSON.stringify(cartList));
+        window.sessionStorage.setItem("cartList", JSON.stringify(cartList));
       }
-    })
-  })
+    });
+  });
 
   // specs
   const categoryProduct = product.category;
