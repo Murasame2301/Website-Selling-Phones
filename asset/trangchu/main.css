@@ -631,3 +631,26 @@ main {
   width: 100%;
   text-align: center;
 }
+
+/*Hiển thị Avatar sau khi đăng nhập*/
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-weight: bold;
+  color: #000;
+}
+
+.logout-btn {
+  text-decoration: none;
+}
