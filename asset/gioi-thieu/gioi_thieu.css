@@ -713,3 +713,26 @@ main {
     padding: 20px;
   }
 }
+
+/*Hiển thị Avatar sau khi đăng nhập*/
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #000;
+}
+
+.logout-btn {
+  text-decoration: none;
+}
