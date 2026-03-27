@@ -45,23 +45,31 @@ function addItem(cartItem,cartIndex,sanpham) {
     cart__item.setAttribute("data-index",cartIndex);
     cart__item_box.appendChild(cart__item);
 
+    const loader_container = document.createElement("div");
     const cart_item__img = document.createElement("div");
     const cart_item__quantity = document.createElement("div");
     const cart_item__info= document.createElement("div");
     const cart_item__remove= document.createElement("div");
     const cart_item__remove_popover = document.createElement("div");
 
+    loader_container.classList.add('loader-container','display-none');
     cart_item__img.classList.add("cart_item__img");
     cart_item__quantity.classList.add("cart_item__quantity");
     cart_item__info.classList.add("cart_item__info");
     cart_item__remove.classList.add("cart_item__remove");
     cart_item__remove_popover.classList.add("cart_item__remove_popover");
 
+    cart__item.appendChild(loader_container);
     cart__item.appendChild(cart_item__img);
     cart__item.appendChild(cart_item__quantity);
     cart__item.appendChild(cart_item__info);
     cart__item.appendChild(cart_item__remove);
     cart__item.appendChild(cart_item__remove_popover);
+
+    // loader
+    const loader = document.createElement("div");
+    loader.classList.add("loader");
+    loader_container.appendChild(loader);
 
     // item img
     const item_img = document.createElement("img");
@@ -150,26 +158,38 @@ function addItem(cartItem,cartIndex,sanpham) {
 
 async function changeItemQuantity() {
     const cart_item__quantity = document.getElementsByClassName("cart_item__quantity");
+    const loader_container = document.getElementsByClassName("loader-container");
 
     for (let i = 0; i < cart_item__quantity.length; i++) {
         let current = cart_item__quantity[i];
         let btn_plus = current.children[0];
         let quantity = current.children[1];
         let btn_minus = current.children[2];
+        let loader = loader_container[i];
 
         btn_plus.addEventListener("click", function() {
-            quantity.dataset.quantity++;
-            cartList[current.parentElement.dataset.index].quantity++;
-            quantity.innerHTML = quantity.dataset.quantity;
-            updateTotalCost();
+            loader.classList.remove("display-none");
+            setTimeout(() => {
+                loader.classList.add("display-none");
+                quantity.dataset.quantity++;
+                cartList[current.parentElement.dataset.index].quantity++;
+                window.sessionStorage.setItem("cartList",JSON.stringify(cartList));
+                quantity.innerHTML = quantity.dataset.quantity;
+                updateTotalCost();
+                },200);
         });
 
         btn_minus.addEventListener("click", function() {
             if (quantity.dataset.quantity > 1) {
-                quantity.dataset.quantity--;
-                cartList[current.parentElement.dataset.index].quantity--;
-                quantity.innerHTML = quantity.dataset.quantity;
-                updateTotalCost();
+                loader.classList.remove("display-none");
+                setTimeout(() => {
+                    loader.classList.add("display-none");
+                    quantity.dataset.quantity--;
+                    cartList[current.parentElement.dataset.index].quantity--;
+                    window.sessionStorage.setItem("cartList",JSON.stringify(cartList));
+                    quantity.innerHTML = quantity.dataset.quantity;
+                    updateTotalCost();
+                }, 200);
             }
         })
     }
@@ -260,4 +280,4 @@ async function main() {
     changeItemQuantity(); 
 }
 
-main();
+document.addEventListener("DOMContentLoaded", main);
